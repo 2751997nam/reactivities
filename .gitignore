@@ -477,3 +477,5 @@ $RECYCLE.BIN/
 *.lnk
 StudentAssets
 appsettings.json
+API/reactivities.db-shm
+API/reactivities.db-wal
