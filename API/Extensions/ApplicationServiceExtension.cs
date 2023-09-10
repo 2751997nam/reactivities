@@ -1,5 +1,7 @@
 using Application.Activities;
 using Application.Core;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
@@ -20,11 +22,13 @@ public static class ApplicationServiceExtension
 
         services.AddCors(opt => {
             opt.AddPolicy("CorsPolicy", policy => {
-                policy.AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:3000");
+                policy.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin();
             });
         });
         services.AddMediatR(typeof (List.Handler));
         services.AddAutoMapper(typeof(MappingProfiles).Assembly);
+        services.AddFluentValidationAutoValidation();
+        services.AddValidatorsFromAssemblyContaining<Create>();
 
         return services;
     }
