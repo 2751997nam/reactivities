@@ -476,6 +476,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 StudentAssets
+TemplateCode
 appsettings.json
 API/reactivities.db-shm
 API/reactivities.db-wal
