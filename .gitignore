@@ -477,6 +477,7 @@ $RECYCLE.BIN/
 *.lnk
 StudentAssets
 TemplateCode
+revert-reset.sh
 appsettings.json
 API/reactivities.db-shm
 API/reactivities.db-wal
